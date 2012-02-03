@@ -3,8 +3,9 @@ auto: true
 
 exclude: ["README.md", "LICENSE.md", "TODO.md", "build", "test"]
 
-owner-name: your name
-owner-page: your homepage
-owner-email: your email
+owner-name: Florian Margaine
+owner-page: http://www.margaine.com
+owner-email: florian@margaine.com
 
-license: your license of choice
+license: Copyright © 2012 Florian Margaine. Tous droits réservés.
+
