@@ -1,0 +1,26 @@
+---
+layout: nil
+---
+
+CACHE MANIFEST
+
+CACHE:
+# Pages
+favicon.ico
+index.html
+resume.html
+# CSS files
+css/1382.css
+css/2x.css
+css/480.css
+css/768.css
+css/992.css
+css/margaine.css
+css/print.css
+css/style.css
+# Javascript files
+js/libs/modernizr-1.7.min.js
+js/plugins.js
+js/script.js
+js/margaine.js
+
