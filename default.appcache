@@ -6,6 +6,8 @@ CACHE MANIFEST
 
 CACHE:
 # Pages
+robots.txt
+humans.txt
 favicon.ico
 index.html
 resume.html
@@ -23,4 +25,9 @@ js/libs/modernizr-1.7.min.js
 js/plugins.js
 js/script.js
 js/margaine.js
+# Images
+img/site/stackoverflow.png
+img/site/github.png
+img/site/drupal.png
+img/site/email.png
 

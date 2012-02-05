@@ -1,5 +1,5 @@
 .license {
-  text-align: center;
+  margin-top: 1em;
 }
 
 html {
@@ -10,18 +10,49 @@ html {
  * Back to top link
  */
 #toTop {
-  width:100px;
+  width:10em;
   border:1px solid #ccc;
   background:#f7f7f7;
   text-align:center;
   padding:5px;
   position:fixed; /* this is the magic */
-  bottom:10px; /* together with this to put the div at the bottom*/
-  right:10px;
+  bottom:2em; /* together with this to put the div at the bottom*/
+  right:2em;
   cursor:pointer;
   display:none;
   color:#333;
   font-family:verdana;
   font-size:11px;
+}
+
+#social-networks div {
+  float: left;
+  width: 300px;
+  text-align: center;
+  margin: 0 1em 0 1em;
+}
+
+a:hover {
+  position: relative;
+  top: 1px;
+}
+
+.addthis_toolbox {
+  margin: 2em 0;
+}
+
+#social-networks span {
+  display: block;
+}
+
+.post-header {
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 1em 0;
+  padding: 1em;
+}
+
+#post-date {
+  margin-bottom: 1em;
 }
 

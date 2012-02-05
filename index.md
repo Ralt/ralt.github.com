@@ -1,4 +1,4 @@
 ---
 layout: frontpage
-title: Florian Margaine - Mon site sur Jekyll :-)
+title: Florian Margaine - Le blog
 ---
