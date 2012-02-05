@@ -47,3 +47,7 @@ _____________________________________________________
 /* 15.VENDOR-SPECIFIC */
 /* 16.TEMPLATE SPECIFICS */
 /* 17.MODERNIZR */
+body {
+  width: 60%;
+}
+
