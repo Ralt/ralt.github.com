@@ -27,9 +27,9 @@ html {
 
 #social-networks div {
   float: left;
-  width: 300px;
+  width: 250px;
   text-align: center;
-  margin: 0 1em 0 1em;
+  margin: 0 1em;
 }
 
 a:hover {
