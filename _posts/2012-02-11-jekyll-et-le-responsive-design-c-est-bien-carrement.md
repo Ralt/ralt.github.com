@@ -12,7 +12,7 @@ Mon ancien site sur Drupal était assez lent quand il n'y avait pas de cache. Or
 
 Ça, c'est la première raison. La deuxième raison, c'est que je suis tombé amoureux de [Vim][1] et [Markdown][2] ces derniers temps, et écrire mes articles dessus me tentait bien. Pourquoi je suis tombé amoureux ? Parce que ces deux outils me permettent d'écrire sans être dérangé par des barres d'outils, des broutilles ou autre, et de me concentrer uniquement sur le contenu que j'écris. Pour exemple, voici une capture d'écran de ce que j'écris (la barre du bas correspond à [tmux][3]) :
 
-![Image de mon écran][4]
+<img src="/img/blog/screenshot-vim-markdown.png" width="100%" alt="Capture d'écran de Markdown dans Vim" />
 
 J'ai donc migré vers [Jekyll][5], générateur de sites statiques. Par chance, lors de mes recherches sur les templates, je suis tombé sur [ce dépôt][6] qui inclut du responsive design. Allez ! Je teste un peu tout ça :-)
 
@@ -86,13 +86,13 @@ Voilà :-) J'espère que cet article vous aura au moins convaincu de l'utilité 
 
 
 
-[1](www.vim.org)
-[2](http://daringfireball.net/projects/markdown/)
-[3](http://tmux.sourceforge.net/)
-[4](/img/blog/screenshot-vim-markdown.png)
-[5](http://jekyllrb.com/)
-[6](https://github.com/bobschi/HTML5-Boilerplate-Jekyll-Template)
-[7](http://www.ruby-lang.org/fr/)
-[8](https://github.com)
-[9](http://stuffandnonsense.co.uk/projects/320andup/)
-[10](http://www.alsacreations.com/article/lire/930-css3-media-queries.html)
+[1]: www.vim.org
+[2]: http://daringfireball.net/projects/markdown/
+[3]: http://tmux.sourceforge.net/
+[4]: /img/blog/screenshot-vim-markdown.png
+[5]: http://jekyllrb.com/
+[6]: https://github.com/bobschi/HTML5-Boilerplate-Jekyll-Template
+[7]: http://www.ruby-lang.org/fr/
+[8]: https://github.com
+[9]: http://stuffandnonsense.co.uk/projects/320andup/
+[10]: http://www.alsacreations.com/article/lire/930-css3-media-queries.html
