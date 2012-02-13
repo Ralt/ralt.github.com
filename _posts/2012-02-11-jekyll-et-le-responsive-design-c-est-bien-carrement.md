@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Jekyll et le responsive design, c'est bien ? Carrément !
+description: Explication brève de Jekyll et du responsive design.
 ---
 
 Petite introduction
