@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Améliorer les performances de Joomla - un vrai casse-tête
+description: Astuces pour améliorer les performances de Joomla.
 ---
 
 Je travaille actuellement sur Joomla!, un des CMS libres les plus connus à l'heure actuelle. On ne rentrera pas dans le débat entre lui et Drupal, chacun a ses avantages et inconvénients, et ce n'est pas le sujet.
