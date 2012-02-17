@@ -18,7 +18,7 @@ ALTER IGNORE nom_de_la_table ADD UNIQUE INDEX(colonne1, colonne2);
 
 Commande magique. J'ai eu mes 1000+ doublons supprimés en une seconde (sur une table de 10000 entrées, à peu près).
 
-Attention toutefois, ça ajoute un index à votre table, donc faites gaffe au niveau des performance, n'hésitez pas à supprimer l'index si ça vous pose souci par la suite.
+Attention toutefois, ça ajoute un index à votre table, donc faites gaffe au niveau des performances, n'hésitez pas à supprimer l'index si ça vous pose souci par la suite.
 
 [1]: http://www.commentcamarche.net/forum/affich-5038607-comment-dans-une-table-enlevee-les-doublons
 [2]: http://stackoverflow.com/questions/3383898/remove-duplicates-using-only-a-mysql-query
