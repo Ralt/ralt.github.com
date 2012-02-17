@@ -13,7 +13,7 @@ Et puis, je suis tombé sur [ce lien][3]. Il explique, en une ligne, comment sup
 Voici la ligne magique :
 
 {% highlight sql %}
-ALTER IGNORE nom\_de\_la\_table ADD UNIQUE INDEX(colonne1, colonne2);
+ALTER IGNORE nom_de_la_table ADD UNIQUE INDEX(colonne1, colonne2);
 {% endhighlight %}
 
 Commande magique. J'ai eu mes 1000+ doublons supprimés en une seconde (sur une table de 10000 entrées, à peu près).
