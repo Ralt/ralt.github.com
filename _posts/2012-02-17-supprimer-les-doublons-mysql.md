@@ -12,9 +12,9 @@ Et puis, je suis tombé sur [ce lien][3]. Il explique, en une ligne, comment sup
 
 Voici la ligne magique :
 
-{% higlight sql %}
+{% highlight sql %}
 ALTER IGNORE nom\_de\_la\_table ADD UNIQUE INDEX(colonne1, colonne2);
-{% endhiglight %}
+{% endhighlight %}
 
 Commande magique. J'ai eu mes 1000+ doublons supprimés en une seconde (sur une table de 10000 entrées, à peu près).
 
