@@ -1,6 +1,6 @@
 ---
 layout: post
-title: XPM.js, la librairie javsScript pour supporter le X\_PixMap en javascript :-)
+title: XPM.js, la librairie javsScript pour supporter le X PixMap en javascript :-)
 description: Annonce de la création de la librairie XPM.JS supportant du pseudo-XPM en javascript.
 ---
 
