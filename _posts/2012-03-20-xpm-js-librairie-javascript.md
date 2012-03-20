@@ -47,6 +47,8 @@ Pour l'utiliser, voici un exemple d'utilisation :
     document.getElementById('cvs').appendChild(xpmImage)
 {% endhighlight %}
 
+Et ça affiche le canvas suivant : ![canvas](/img/blog/xpmjs.png)
+
 Vous pouvez revoir ou forker mon code, c'est pour ça qu'il est sur [GitHub][3] !
 
 [1]: http://fr.wikipedia.org/wiki/X_PixMap
