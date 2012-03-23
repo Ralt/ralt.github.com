@@ -1,9 +1,9 @@
 body {
     background: #000;
-    color: #FEFCC9;
+    color: #FF0000;
     text-align: center;
     font-size: 200px;
-    text-shadow: 0 0 20px #FEFCC9;
+    text-shadow: 0 0 20px #FF0000;
     font-family: "Economica", sans-serif;
     margin-top: 1em;
 }
