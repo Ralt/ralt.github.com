@@ -9,21 +9,33 @@
         seconds,
         tmp,
         countdown,
-        pad = function(number) { return (number < 10 ? '0' : '') + number }
-    ;(function() {
+        pad = function(number) { return (number < 10 ? '0' : '') + Math.floor(number) },
+        minute = 60 * 1000,
+        hour = minute * 60,
+        day = hour * 24
+    ;(function tick() {
         curDate = new Date()
-        diff = new Date(curDate.getTime() - endDate.getTime())
-        days = Math.abs(diff / (24 * 60 * 60 * 1000))
-        tmp = diff % (24 * 60 * 60 * 1000)
-        hours = Math.abs(tmp / (60 * 60 * 1000))
-        tmp = tmp % (60 * 60 * 1000)
-        minutes = Math.abs(tmp / (60 * 1000))
-        tmp = tmp % (60 * 1000)
-        seconds = Math.abs(tmp / 1000)
-        countdown = pad(parseInt(days, 10)) + ':' + pad(parseInt(hours, 10)) + ':' + pad(parseInt(minutes, 10)) + ':' + pad(parseInt(seconds, 10))
-        if ('textContent' in el) el.textContent = countdown
-        else el.innerText = countdown
-        setTimeout(arguments.callee, 1000)
+        diff = Math.abs(new Date(curDate.getTime() - endDate.getTime()))
+        days = diff / day
+
+        tmp = diff % day
+        hours = tmp / hour
+
+        tmp = diff % hour
+        minutes = tmp / minute
+
+        tmp = diff % minute
+        seconds = tmp / 1000
+
+        countdown = pad(days) + ':' + pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+
+        if ('textContent' in el) {
+            el.textContent = countdown
+        }
+        else {
+            el.innerText = countdown
+        }
+        setTimeout(tick, 1000)
     }())
 }())
 

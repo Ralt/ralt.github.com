@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Le Curriculum Vitae classique
+title: Le Curriculum Vitae
 ---
 
 Compétences
