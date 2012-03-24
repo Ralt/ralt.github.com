@@ -15,19 +15,25 @@
         day = hour * 24
     ;(function tick() {
         curDate = new Date()
-        diff = Math.abs(new Date(curDate.getTime() - endDate.getTime()))
-        days = diff / day
+        diff = new Date(curDate.getTime() - endDate.getTime())
+        if (diff > 0) {
+            countdown = "It's over!"
+        }
+        else {
+            diff = Math.abs(diff)
+            days = diff / day
 
-        tmp = diff % day
-        hours = tmp / hour
+            tmp = diff % day
+            hours = tmp / hour
 
-        tmp = diff % hour
-        minutes = tmp / minute
+            tmp = diff % hour
+            minutes = tmp / minute
 
-        tmp = diff % minute
-        seconds = tmp / 1000
+            tmp = diff % minute
+            seconds = tmp / 1000
 
-        countdown = pad(days) + ':' + pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+            countdown = pad(days) + ':' + pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+        }
 
         if ('textContent' in el) {
             el.textContent = countdown
