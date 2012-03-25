@@ -1,6 +1,6 @@
 (function() {
     var el = document.getElementById('countdown'),
-        endDate = new Date('March 30, 2012 18:10:00'),
+        endDate = new Date('March 30, 2012 17:10:00'),
         curDate,
         diff,
         days,
