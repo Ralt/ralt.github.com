@@ -24,10 +24,19 @@ Le problème, c'est que tout est objet en javascript. Et certains le sont plus q
 La solution à ce problème ? La voici :
 
 {% highlight js %}
-({}).toString.apply([]) // "object Array"
-({}).toString.apply(null) // "object Null"
-({}).toString.apply(function() {}) // "object Function"
+Object.prototype.toString.apply([]) // "object Array"
+Object.prototype.toString.apply(null) // "object Null"
+({}).toString.apply(function() {}) // "object Function" // En utilisant "Object.prototype", c'est un poil [plus rapide][1]
+
+// Si vous comptez l'utiliser plusieurs fois :
+function realTypeof(obj) {
+    return Object.prototype.toString.apply(obj)
+}
+realTypeof([]) // "object Array"
 {% endhighlight %}
+
+Oh, et ça marche jusqu'à IE6.
 
 Juste un petit truc que je voulais partager :-)
 
+[1]: http://jsperf.com/object-prototype-vs-litteral-object
