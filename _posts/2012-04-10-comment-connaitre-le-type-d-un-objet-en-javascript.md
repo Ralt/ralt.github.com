@@ -19,7 +19,7 @@ typeof null // "object" -> no good :(
 typeof [] // "object" -> no good either :(
 {% endhighlight %}
 
-Le problème, c'est que tout est objet en javascript. Et certains le sont plus que d'autres.
+Le problème, c'est que quasiment tout est objet en javascript. Les [fonctions][2] sont un cas particulier car elles ont un constructeur particulier.
 
 La solution à ce problème ? La voici :
 
@@ -40,3 +40,4 @@ Oh, et ça marche jusqu'à IE6.
 Juste un petit truc que je voulais partager :-)
 
 [1]: http://jsperf.com/object-prototype-vs-litteral-object
+[2]: http://es5.github.com/#x15.3.4
