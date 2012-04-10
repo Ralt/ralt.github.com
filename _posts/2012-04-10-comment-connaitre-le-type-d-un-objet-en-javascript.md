@@ -26,8 +26,12 @@ La solution à ce problème ? La voici :
 {% highlight js %}
 Object.prototype.toString.apply([]) // "object Array"
 Object.prototype.toString.apply(null) // "object Null"
-({}).toString.apply(function() {}) // "object Function" // En utilisant "Object.prototype", c'est un poil [plus rapide][1]
+({}).toString.apply(function() {}) // "object Function"
+{% endhighlight %}
 
+Les deux méthodes fonctionnent, mais c'est un poil [plus rapide][1] en utilisant `Object.prototype`.
+
+{% highlight js %}
 // Si vous comptez l'utiliser plusieurs fois :
 function realTypeof(obj) {
     return Object.prototype.toString.apply(obj)
