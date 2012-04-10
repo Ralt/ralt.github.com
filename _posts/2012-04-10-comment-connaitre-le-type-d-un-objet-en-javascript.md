@@ -31,8 +31,9 @@ Object.prototype.toString.apply(null) // "object Null"
 
 Les deux méthodes fonctionnent, mais c'est un poil [plus rapide][1] en utilisant `Object.prototype`.
 
+Si vous comptez l'utiliser plusieurs fois :
+
 {% highlight js %}
-// Si vous comptez l'utiliser plusieurs fois :
 function realTypeof(obj) {
     return Object.prototype.toString.apply(obj)
 }
