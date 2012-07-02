@@ -7,7 +7,11 @@ li {
 }
 
 html {
-  /*background-color: #ECEBE7;*/
+  background-color: #ECEBE7;
+}
+
+body {
+  background-color: #FFFFFF;
 }
 
 /*
