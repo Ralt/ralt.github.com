@@ -19,13 +19,13 @@ bien entendu de :
 Ces méthodes sont franchement géniales. Un petit exemple d'une fonction `diff` permettant de comparer
 deux tableaux utilisant ces nouvelles méthodes:
 
-<% highlight js %>
+{% highlight js %}
 Array.prototype.diff = function( arr ) {
     return arr.map( function( v ) {
         if ( !~this.indexOf( v ) ) return v;
     }, this ).filter( Boolean );
 };
-<% endhighlight %>
+{% endhighlight %}
 
 Le `filter( Boolean )` permet simplement d'enlever les valeurs falsy (`undefined`, `false`, etc).
 
@@ -34,12 +34,12 @@ Bref, tout ça pour dire que ces nouvelles méthodes permettent d'écrire du cod
 Or, ces méthodes sont sur le prototype des tableaux (`Array.prototype`). C'est bien cool, mais du coup,
 ça ne marche pas sur les `NodeList` ou `HTMLCollection`. Par exemple, ça ne marche pas:
 
-<% highlight js %>
+{% highlight js %}
 var a = document.links;
 a.forEach( function( l ) {
     console.log( l ); // Ne marche pas :(
 } );
-<% endhighlight %>
+{% endhighlight %}
 
 Bien que les `NodeList` soient similaires à des tableaux, elles n'en sont pas.
 
@@ -50,16 +50,16 @@ Mais il existe une astuce : [`call`][6] !
 
 En effet, le code suivant marche:
 
-<% highlight js %>
+{% highlight js %}
 var a = document.links;
 [].forEach.call( a, function( l ) {
     console.log( l ); // Yay !
 } );
-<% endhighlight %>
+{% endhighlight %}
 
 Trop cool ! Un exemple pratique : comment vérifier que tous les champs d'un formulaire soient bien remplis ?
 
-<% highlight js %>
+{% highlight js %}
 var els = document.forms.formName.elements,
     allCheck = [].every.call( els, function( el ) {
         return el.checked;
@@ -67,7 +67,7 @@ var els = document.forms.formName.elements,
 
 // allCheck is true if all the elements are checked,
 // otherwise, it's false.
-<% endhighlight %>
+{% endhighlight %}
 
 L'exemple est simplifié, mais vous voyez l'idée :-)
 
@@ -85,14 +85,14 @@ Réutilisabilité
 
 Le `[].forEach.call`, c'est quand même beaucoup de texte ! Donc voici une méthode qui va simplifier les choses:
 
-<% highlight js %>
+{% highlight js %}
 var forEach = Array.prototype.forEach.call.bind( Array.prototype.forEach );
 
 // Utilisation:
 forEach( els, function( el ) {
     // :-)
 } );
-<% endhighlight %>
+{% endhighlight %}
 
 Mot de la fin
 ---
