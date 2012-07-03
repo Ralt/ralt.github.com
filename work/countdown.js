@@ -1,5 +1,5 @@
 (function() {
-    var el = document.getElementById('countdown'),
+    var el = document.getElementById('countdown').firstChild,
         endDate = new Date('July 27, 2012 17:00:00'),
         curDate,
         diff,
@@ -35,12 +35,8 @@
             countdown = pad(days) + ':' + pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
         }
 
-        if ('textContent' in el) {
-            el.textContent = countdown
-        }
-        else {
-            el.innerText = countdown
-        }
+        el.nodeValue = countdown;
+
         setTimeout(tick, 1000)
     }())
 }())
