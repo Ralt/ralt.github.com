@@ -35,14 +35,7 @@
             countdown = pad(days) + ':' + pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
         }
 
-        if ( el.hasChildNodes() ) {
-            el.firstChild.nodeValue = countdown;
-        }
-        else {
-            el.appendChild(
-                document.createTextNode( countdown )
-            );
-        }
+        el.textContent = countdown;
 
         setTimeout(tick, 1000)
     }())
