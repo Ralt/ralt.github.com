@@ -50,6 +50,16 @@ This concept allows you to reuse those pies across different projects. For examp
 made a user management pie for some project, you could just copy paste this pie onto your
 new project, and it will work!
 
+And the biggest magic is this one:
+
+- The models are injected into the controllers. You can reach it through `this.model`.
+- The db handler is injected into the models. You can reach it through `this.db`.
+- The middlewares are available in the `routes.json` file.
+- If you have defined some dependencies, a pie's controller can be reached in another
+pie through `this.pieName`.
+
+All this, with no effort whatsoever. It's there.
+
 And now
 ---
 
