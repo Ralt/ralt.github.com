@@ -7,7 +7,7 @@ description: A new web framework for node.js has been released.
 I've been working on a web framework for node.js these last few weeks. I've named
 this project:
 
-    [`tartempion`: The web framework for people who like to eat some pie.][0].
+[`tartempion`: The web framework for people who like to eat some pie.][0].
 
 Today, it's been released onto npm!
 
