@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Web framework for node.js: tartempion is released!
+title: Web framework for node.js&#58; tartempion is released!
 description: A new web framework for node.js has been released.
 ---
 
