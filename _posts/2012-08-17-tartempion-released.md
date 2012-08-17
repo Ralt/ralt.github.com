@@ -75,7 +75,7 @@ If you have any feedback, I'd really appreciate it! `tartempion` is at its very 
 and I plan on spending a lot of time on it.
 
 
-   [0]: https://github.com/Ralt/tartempion
+   [0]: https://npmjs.org/package/tartempion
    [1]: http://expressjs.com
    [2]: https://github.com/Raynos/ncore
    [3]: https://github.com/Ralt/tartempion#roadmap
