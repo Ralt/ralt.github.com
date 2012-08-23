@@ -19,7 +19,7 @@ accessible [sur GitHub][3].
 Browserify, quant à lui, est génial. Il permet d'écrire du code javascript comme dans
 node.js, en utilisant `require` de manière synchrone, on peut même utiliser des modules
 disponibles par défaut dans node.js (`events`, `assert`, `querystring`, etc, ce qui
-ne font pas d'I/O) pour des modules disponibles sur npm (comme `domready`).
+ne font pas d'I/O) ou des modules disponibles sur npm (comme `domready`).
 
 Vous pouvez voir le code de Snake ici: https://github.com/Ralt/Snake/tree/gh-pages/js
 
