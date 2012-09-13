@@ -76,3 +76,5 @@ f.toString(); // "function f() { lib.next(); }"
 Et voilà ! De cette manière, on peut donc interagir avec la page à partir
 d'une extension Google Chrome.
 
+   [1]: https://github.com/Ralt/remoteprez
+
