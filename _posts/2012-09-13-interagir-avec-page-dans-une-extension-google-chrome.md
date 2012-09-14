@@ -36,7 +36,7 @@ function injectCode( code ) {
     // Injecting the script will execute the code in it!
     document.body.appendChild( script );
 
-    // Once it's injected, the code will be execute, so we don't need
+    // Once it's injected, the code will be executed, so we don't need
     // the element anymore
     script.parentNode.removeChild( script );
 }
