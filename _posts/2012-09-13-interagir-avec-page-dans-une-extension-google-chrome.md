@@ -62,7 +62,8 @@ function f() {
 }
 
 // This is the magic hack!
-injectCode( f.toString() );
+// Don't forget the execute the function
+injectCode( f.toString() + 'f();' );
 {% endhighlight %}
 
 Utiliser la méthode `toString()` sur la fonction (et non pas *l'exécution* de
