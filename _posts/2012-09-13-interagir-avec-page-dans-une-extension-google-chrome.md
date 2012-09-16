@@ -63,7 +63,7 @@ function f() {
 
 // This is the magic hack!
 // Don't forget the execute the function
-injectCode( f.toString() + 'f();' );
+injectCode( ';(' + f.toString() + '());' );
 {% endhighlight %}
 
 Utiliser la méthode `toString()` sur la fonction (et non pas *l'exécution* de
@@ -73,6 +73,11 @@ dans le cas de `f`, ça donnera ceci :
 {% highlight js %}
 f.toString(); // "function f() { lib.next(); }"
 {% endhighlight %}
+
+Petite astuce : exécutez automatiquement la fonction (avec des parenthèses
+d'exécution autour) et ne l'appelez pas, ça ne marchera pas si vous minifiez
+votre code javascript. Aussi, le point-virgule est là pour éviter les
+problèmes d'ASI avec du code déjà existant sur la page.
 
 Et voilà ! De cette manière, on peut donc interagir avec la page à partir
 d'une extension Google Chrome.
