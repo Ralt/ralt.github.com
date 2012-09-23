@@ -4,7 +4,7 @@ layout: default
 <header>
 <h2>Les articles du blog<h2>
 </header>
-{% for ps in site.posts %}
+{% for ps in paginator.posts %}
 <section>
 <header class="post-header">
 <hgroup>
@@ -14,3 +14,19 @@ layout: default
 </header>
 </section>
 {% endfor %}
+
+<!-- Pagination links -->
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="/page{{paginator.previous_page}}" class="previous">Précédent</a>
+  {% else %}
+    <span class="previous">Précédent</span>
+  {% endif %}
+  <span class="page_number ">Page: {{paginator.page}} of {{paginator.total_pages}}</span>
+  {% if paginator.next_page %}
+    <a href="/page{{paginator.next_page}}" class="next ">Suivant</a>
+  {% else %}
+    <span class="next ">Suivant</span>
+  {% endif %}
+</div>
+
