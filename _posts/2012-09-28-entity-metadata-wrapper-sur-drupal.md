@@ -17,7 +17,7 @@ $wrapper = entity_metadata_wrapper('node', $node);
 {% endhighlight %}
 
 Le 1er paramètre est le type d'entité ('node', 'user', etc), le 2ème est
-l'entité ell-même.
+l'entité elle-même.
 
 Une fois que vous avez fait ça, vous avez accès à tous les champs. Que ce soit
 sur l'entité elle-même, ou sur les entités référencées également !
@@ -43,6 +43,16 @@ en conséquence. Par contre, elle ne sera pas enregistrée. Vous devez utiliser
 {% highlight php %}
 $wrapper->field->set($value);
 $wrapper->save(); // Saves to the database
+{% endhighlight %}
+
+Si vous faites un changement sur une entitée référencée, vous ne pouvez pas
+utiliser le `->save()` sur le wrapper, mais sur le champ de la référence.
+
+Exemple :
+
+{% highlight php %}
+$wrapper->ref->field->set($value);
+$wrapper->ref->save();
 {% endhighlight %}
 
 Si vous avez un champ multiple, vous pouvez itérer en utilisant
