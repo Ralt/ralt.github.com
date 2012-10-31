@@ -32,3 +32,35 @@ document.querySelectorAll( selector ).forEach( function( el ) {
 mais si ça marche sur IE9...
 
 Démo en ligne [sur jsfiddle](http://jsfiddle.net/Ralt/ZfSnq/).
+
+Cette méthode ouvre plein de possibilités. Par exemple, le code suivant marche
+pour valider que tous les `input` sont bien remplis:
+
+{% highlight html %}
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="submit" id="submit" value="Check!">
+{% endhiglight %}
+
+{% highlight js %}
+NodeList.prototype.every = Array.prototype.every;
+
+document.getElementById('submit').addEventListener('click', function() {
+    // Check whether all the input are selected
+    var all = document.querySelectorAll('input').every(function(el) {
+        return el.value !== '';
+    });
+
+    if (all) {
+        console.log('All checked!');
+    }
+    else {
+        console.log('Some are not checked.');
+    }
+}, false);
+{% endhighlight %}
+
+[Démo en ligne](http://jsfiddle.net/Ralt/TX2G9/).
+
+Imaginez ! Quelle nouvelle manière pouvez-vous trouver ?

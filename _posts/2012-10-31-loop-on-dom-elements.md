@@ -34,6 +34,40 @@ works on IE...
 
 Online demo [on jsfiddle][2].
 
+This opens up new ways to code. For example, the following works to validate
+that all the `input` fields are filled in:
+
+{% highlight html %}
+<input type="text">
+<input type="text">
+<input type="text">
+<input type="submit" id="submit" value="Check!">
+{% endhiglight %}
+
+{% highlight js %}
+NodeList.prototype.every = Array.prototype.every;
+
+document.getElementById('submit').addEventListener('click', function() {
+    // Check whether all the input are selected
+    var all = document.querySelectorAll('input').every(function(el) {
+        return el.value !== '';
+    });
+
+    if (all) {
+        console.log('All checked!');
+    }
+    else {
+        console.log('Some are not checked.');
+    }
+}, false);
+{% endhighlight %}
+
+[Online demo][3].
+
+Imagine! What new way could you find?
+
+
    [0]: http://margaine.com/2012/10/31/boucler-sur-elements-dom.html
    [1]: http://margaine.com/2012/07/02/utiliser-methods-array-es5-nodelist.html
    [2]: http://jsfiddle.net/Ralt/ZfSnq/
+   [3]: http://jsfiddle.net/Ralt/TX2G9/
