@@ -15,8 +15,9 @@ Array.prototype.forEach.call( document.querySelectorAll( selector ),
 });
 {% endhighlight %}
 
-Ça en fait du texte. Je viens de penser à une solution qui devrait ravir du
-monde ! Elle existe sûrement ailleurs, mais je ne l'ai jamais vue :-)
+Ça en fait du texte. Utiliser un simple `for` pourrait même être mieux. Je viens
+de penser à une solution qui devrait ravir du monde ! Elle existe sûrement
+ailleurs, mais je ne l'ai jamais vue :-)
 
 {% highlight js %}
 // Magic line!
@@ -26,5 +27,8 @@ document.querySelectorAll( selector ).forEach( function( el ) {
     el.textContent = Math.random();
 });
 {% endhighlight %}
+
+Ça marche sur Firefox, Chrome et IE9. Je n'ai pas testé sur d'autres navigateurs,
+mais si ça marche sur IE9...
 
 Démo en ligne [sur jsfiddle](http://jsfiddle.net/Ralt/ZfSnq/).
