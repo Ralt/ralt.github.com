@@ -41,7 +41,7 @@ pour valider que tous les `input` sont bien remplis:
 <input type="text">
 <input type="text">
 <input type="submit" id="submit" value="Check!">
-{% endhiglight %}
+{% endhighlight %}
 
 {% highlight js %}
 NodeList.prototype.every = Array.prototype.every;

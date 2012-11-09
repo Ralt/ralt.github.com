@@ -42,7 +42,7 @@ that all the `input` fields are filled in:
 <input type="text">
 <input type="text">
 <input type="submit" id="submit" value="Check!">
-{% endhiglight %}
+{% endhighlight %}
 
 {% highlight js %}
 NodeList.prototype.every = Array.prototype.every;
