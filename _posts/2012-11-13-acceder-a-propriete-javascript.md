@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Accéder à une propriété JavaScript - les 2 manières
-description: Description des deux manières disponibles pour accéder à une
-propriété en JavaScript
+description: Description des deux manières disponibles pour accéder à une propriété en JavaScript
 ---
 
 J'écris cet article car j'ai remarqué que beaucoup de personnes connaissaient
