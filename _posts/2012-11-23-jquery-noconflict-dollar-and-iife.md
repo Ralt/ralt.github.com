@@ -19,7 +19,7 @@ pourquoi ça ne choque personne de voir autant de code ?
 
 Bref, passons le sens philosophique de la chose qui est probablement lié au fait
 que les gens considèrent javascript comme un toy language, il y a un moyen assez
-simple de récupérer ce cher dollar perdu à cause d'un noconflict :
+simple de récupérer ce cher `$` perdu à cause d'un `noConflict` :
 
 {% highlight js %}
 (function($) {
@@ -117,7 +117,7 @@ function f ($) {}
 f(jQuery);
 {% endhighlight %}
 
-On est bien d'accord que le dollar correspondra donc à `jQuery` dans la fonction
+On est bien d'accord que `$` correspondra donc à `jQuery` dans la fonction
 `f`, n'est-ce pas ? De la même manière, ce code fait la même chose:
 
 {% highlight js %}
