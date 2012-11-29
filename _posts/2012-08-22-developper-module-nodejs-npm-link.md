@@ -37,7 +37,3 @@ De la même manière que vous feriez `npm install someModule`, vous devez simple
 
 Et voilà ! Pareil que pour l'exécutable global, ce ne sont que des liens vers le dossier
 de développement, donc tous les changements sont en temps réel.
-
-**Update** J'ai créé un module qtout simple qui devrait expliquer tout cela correctement
-avec un exemple : https://github.com/Ralt/mymodule
-
