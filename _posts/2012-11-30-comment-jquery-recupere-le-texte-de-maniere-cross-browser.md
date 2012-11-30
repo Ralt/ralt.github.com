@@ -1,3 +1,9 @@
+---
+layout: post
+title: Comment jQuery récupère le texte de manière cross browser
+description: Explication en code de comment jQuery recupere le texte de maniere cross-browser
+---
+
 Une question assez intéressante, c'est de savoir comment jQuery fait
 pour récupérer le texte d'un élément de manière cross browser. Si vous
 avez une idée, vous pensez peut-etre qu'il utilise soit `innerText`, ou
