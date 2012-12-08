@@ -1,0 +1,13 @@
+---
+layout: default
+title: Florian Margaine - Le blog
+description: Blog de Florian Margaine - Site web vitrine.
+---
+
+<ul>
+{% for ps in site.posts %}
+<li>
+<span class="date"><time datetime="{{ ps.date }}" pubdate>{{ ps.date| date:"%d/%m/%Y" }}</time></span> - <a href="{{ ps.url }}">{{ ps.title }}</a>
+</li>
+{% endfor %}
+</ul>
