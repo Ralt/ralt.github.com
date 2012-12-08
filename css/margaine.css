@@ -3,6 +3,10 @@ li {
   list-style-type: circle;
 }
 
+ul.front li {
+  margin-bottom: 0.5em;
+}
+
 .license {
   margin-top: 1em;
 }

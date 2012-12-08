@@ -4,7 +4,7 @@ title: Florian Margaine - Le blog
 description: Blog de Florian Margaine - Site web vitrine.
 ---
 
-<ul>
+<ul class="front">
 {% for ps in site.posts %}
 <li>
 <span class="date"><time datetime="{{ ps.date }}" pubdate>{{ ps.date| date:"%d/%m/%Y" }}</time></span> - <a href="{{ ps.url }}">{{ ps.title }}</a>
