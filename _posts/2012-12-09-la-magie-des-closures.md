@@ -11,7 +11,7 @@ Le lexical scope
 
 Avant de comprendre ce qu'est une closure, il faut d'abord expliquer ce qu'est le **contexte lexical**, que je vais appeler *lexical scope* par la suite. Juste pour la petite info, le lexical scope est un concept récupéré de Scheme, et c'est en partie la raison pour laquelle on dit que Javascript est basé sur Scheme.
 
-Il faut d'abord savoir que les scopes de javascript sont déterminés par les fonctions. Si vous déclarez une variables dans une fonction, elle est disponible dans toute cette fonction, et uniquement dans la fonction. Petit exemple :
+Il faut d'abord savoir que les scopes de javascript sont déterminés par les fonctions. Si vous déclarez une variable dans une fonction, elle est disponible dans toute cette fonction, et uniquement dans la fonction. Petit exemple :
 
 {% highlight js %}
 function f() {
@@ -102,7 +102,7 @@ Dans mon exemple, la fonction `g` est typiquement ce qu'on appelle une closure. 
     Représentation de g :
 
     g :
-       variables disponibles : i = 0
+       variables disponibles dans la closure : i = 0
        fonction : function() {
             return i++;
        }
@@ -110,7 +110,7 @@ Dans mon exemple, la fonction `g` est typiquement ce qu'on appelle une closure. 
     Si j'appelle g, voici ce qu'elle devient :
 
     g :
-        variables disponibles : i = 0
+        variables disponibles dans la closure : i = 0
         fonction : function() {
             return 0++; // Je retourne 0 et j'incrémente i
         }
@@ -118,7 +118,7 @@ Dans mon exemple, la fonction `g` est typiquement ce qu'on appelle une closure. 
     Si je rappelle g :
 
     g :
-        variables disponibles : i = 1
+        variables disponibles dans la closure : i = 1
         fonction : function() {
             return 1++; // Je retourne 1 et j'incrémente i
         }
