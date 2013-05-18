@@ -39,8 +39,7 @@ Après cette explication brève, place au code !
 Voici un exemple de comment j'ai organisé mon code JS à l'aide de
 browserify :
 
-- Un fichier `main.js` qui comprend simplement une liste de scripts à
-  exécuter.
+Un fichier `main.js` qui comprend simplement une liste de scripts à exécuter.
 
     // fichier main.js
 
