@@ -42,25 +42,21 @@ browserify :
 - Un fichier `main.js` qui comprend simplement une liste de scripts à
   exécuter.
 
-```javascript
-// fichier main.js
+    // fichier main.js
 
-// Charge le fichier menu.js dans le meme dossier
-require('./menu');
+    // Charge le fichier menu.js dans le meme dossier
+    require('./menu');
 
-// Charge le fichier home.js dans dossier apps/
-require('./apps/home');
-```
+    // Charge le fichier home.js dans dossier apps/
+    require('./apps/home');
 
 Les fichiers étant `require`d vont être exécutés au chargement. Dans
 chaque fichier, je peux donc faire ma petite histoire, lié au menu ou
 à la homepage de mon site, par exemple.
 
-```javascript
-// fichier menu.js
+    // fichier menu.js
 
-// J'active le plugin superfish ou autre
-```
+    // J'active le plugin superfish ou autre
 
 Bon. Pour l'instant, le principe des modules est assez sympa, mais
 est-ce qu'il vaut vraiment le coup ? La prochaine phase vous fera dire oui.
@@ -73,9 +69,7 @@ permet d'utiliser des modules disponibles sur npm. Qu'est-ce que ça
 veut dire ? Que si vous voulez jQuery, vous faites un `npm install
 jquery`, et vous utilisez la ligne suivante dans votre code :
 
-```javascript
-var $ = require('jquery');
-```
+    var $ = require('jquery');
 
 Et vous pouvez définir toutes les dépendances que vous voulez dans le
 `package.json` à la base de votre projet, de cette manière :
@@ -94,11 +88,9 @@ vous voulez créer le module "carrousel" qui activera un carrousel,
 vous n'aurez qu'à utiliser la ligne suivante dans le code de votre
 application :
 
-```javascript
-var carrousel = require('carrousel');
+    var carrousel = require('carrousel');
 
-carrousel.run('some-id');
-```
+    carrousel.run('some-id');
 
 Grace a [npm link][5], vous pourrez facilement développer des modules
 dans tous les sens.
