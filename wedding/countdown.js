@@ -1,6 +1,6 @@
 (function() {
     var el = document.getElementById('countdown'),
-        endDate = new Date('August 24, 2013 16:15:00 UTC'),
+        endDate = new Date('August 24, 2013 16:15:00'),
         curDate,
         diff,
         days,
@@ -21,10 +21,7 @@
         }
         else {
             diff = Math.abs(diff)
-            days = diff / day
-
-            tmp = diff % day
-            hours = tmp / hour
+            hours = diff / hour
 
             tmp = diff % hour
             minutes = tmp / minute
@@ -32,7 +29,7 @@
             tmp = diff % minute
             seconds = tmp / 1000
 
-            countdown = pad(days) + ':' + pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+            countdown = pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
         }
 
         el.textContent = countdown;
