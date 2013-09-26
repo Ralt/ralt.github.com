@@ -11,12 +11,9 @@ ul.front li {
   margin-top: 1em;
 }
 
-html {
-  background-color: #ECEBE7;
-}
-
 body {
   background-color: #FFFFFF;
+  color: #333;
 }
 
 /*
