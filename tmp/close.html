@@ -5,6 +5,11 @@
     <title></title>
 </head>
 <body>
-    <input type="button" onclick="open(location, '_self').close();" value="close me" />
+    <input id="t" type="button" value="close me" />
+    <script>
+    document.getElementById('t').onclick = function() {
+        open(location, '_self').close();
+    };
+    </script>
 </body>
 </html>
