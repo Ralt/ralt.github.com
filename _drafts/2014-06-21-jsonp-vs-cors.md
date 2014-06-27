@@ -1,0 +1,148 @@
+---
+layout: post
+title: JSONP vs CORS - la guerre du cross-domaine
+description: Explication de la différence entre JSONP et CORS
+---
+
+## Introduction
+
+Tous les jours, on envoie des requêtes AJAX à droite à gauche, sans
+vraiment y réfléchir. Et puis vient un jour, où on doit envoyer une
+requête AJAX sur un autre domaine que le sien, et tout part en
+sucette.
+
+Quand on se retrouve face à ce choix, il existe 2 solutions : JSONP et
+CORS.
+
+Le problème, c'est que beaucoup de développeurs ne savent pas ce que
+sont ces deux techniques. Et on se retrouve avec ce genre de code :
+
+    $.ajax({
+        type: 'jsonp',
+        crossDomain: true
+        // ...
+
+Si vous ne voyez pas l'horreur, j'espère que vous la verrez d'ici la
+fin de cet article.
+
+## Historique
+
+Avant d'expliquer les deux techniques, un peu d'historique.
+
+Pourquoi les requêtes cross-domaine sont-elles si compliquées à faire
+?! Pourquoi ne peut-on pas simplement envoyer une requête AJAX comme
+d'habitude, et ça devrait marcher ?
+
+Une raison assez simple : la sécurité.
+
+Un petit exemple. Vous arrivez sur mon site, et je lance une requête
+AJAX vers <https://gmail.com>. Si vous êtes authentifiés, la requête va
+utiliser les cookies de votre navigateur, et la page de GMail,
+connecté avec votre compte, est renvoyée comme réponse. Vous allez me
+dire : "oui mais les token CSRF sont pour ça !". Non, la requête part,
+et **la réponse est lue par le JS de mon site**. Je peux donc récupérer
+vos tokens CSRF, et faire toutes les requêtes que je veux, comme
+supprimer tous vos mails. Ou pire.
+
+Pour éviter ce type de scénario, les navigateurs ont donc bloqués les
+requêtes cross-domaine pour la sécurité des utilisateurs.
+
+Toutefois, après un certain temps, on s'est rendu compte qu'on
+aimerait bien faire des requêtes sur d'autres domaines, pour pouvoir
+récupérer la météo sans passer par notre serveur par exemple.
+
+En premier, le *hack* JSONP est apparu. Puis, une réelle solution,
+CORS, a été implémentée dans les navigateurs.
+
+## CORS
+
+On va commencer par expliquer la plus simple des deux techniques :
+CORS, aussi appelé Cross-Origin Resource Sharing.
+
+En réalité, CORS est comme une requête AJAX normale, sauf que la
+réponse du serveur doit avoir un header particulier pour que le
+navigateur ne bloque pas le retour. Voici le header :
+
+    Access-Control-Allow-Origin: *
+
+Le `*` est l'origine de la requête acceptée. `*` signifie "n'importe
+quel domaine". On peut limiter la liste des domaines qui peuvent faire
+des requêtes CORS avec ce header.
+
+Lorsque le navigateur reçoit la réponse d'un autre domaine, il fait
+plusieurs choses :
+
+1.  Il lit les headers. S'il ne trouve aucun header
+    "Access-Control-Allow-Origin", il renvoie une erreur.
+2.  S'il trouve le header, et que le domaine n'est ni `*`, ni le
+    domaine en cours, il renvoie une erreur.
+3.  Si le domaine correspond au domaine d'origine de la requête (`*`
+       compris), alors il exécute le callback de la requête AJAX.
+
+CORS est donc assez simple ! C'est une requête AJAX normale, mais pour
+qu'elle marche, le serveur doit être explicite sur le fait d'accepter
+les-dites requêtes, via un header dans la réponse.
+
+## JSONP
+
+JSONP, aussi appelé JSON-Padding, est un hack. Sérieusement. C'est une
+technique détournée qui permet de faire des requêtes cross-domaine, et
+exécuter un callback quand la réponse revient.
+
+Le but premier de toute requête cross-domaine est de pouvoir récupérer
+des données sur un autre domaine. Et donc, d'exécuter une fonction
+quand la réponse est renvoyée.
+
+Voici comment JSONP marche : il ajoute une balise script au DOM, et
+demande au serveur d'afficher du JS qui exécutera une fonction
+globale.
+
+Afin de pouvoir passer des paramètres au serveur distant, vu que
+seules des requêtes GET peuvent être faites (on inclut une balise
+script), les paramètres sont passées en query string. En général, un
+des paramètres s'appelle "callback", et il s'agit du nom de la
+fonction globale qu'on veut que le serveur exécute.
+
+Pour donner un exemple, voyons l'URL <http://example.com/jsonp>. Disons
+que cette API renvoie les dates de naissance de personnes. On doit
+donc lui passer le nom en paramètre.
+
+Ensuite, on va déclarer une fonction de callback.
+
+    window.jsonpcallback = function(birthdate) {
+        console.log(birthdate);
+    };
+
+Une fois tout prêt, on peut injecter le script suivant dans le DOM :
+
+    <script src="http://example.com/jsonp?name=jason&callback=jsonpcallback"></script>
+
+Et voici la réponse que le serveur va fournir :
+
+    jsonpcallback("10/09/1988");
+
+Le navigateur charge donc le script, et étant donné que c'est une
+balise script, il exécute le javascript qu'il trouve dedans. Ce qui va
+donc appeler la fonction globale déclarée plus haut.
+
+Comme je vous disais donc : un véritable hack.
+
+Un réel problème est que vous devez absolument faire confiance au
+serveur JSONP, puisqu'ils peuvent exécuter n'importe quel bout de
+javascript, sur votre site, à votre insu. A n'utiliser donc qu'au cas
+où rien d'autre n'est possible, et/ou si vous avez entièrement
+confiance au serveur.
+
+## Conclusion
+
+Vous comprenez maintenant pourquoi le code de l'introduction était
+une hérésie :-)
+
+Ces 2 concepts complètement différents ne peuvent clairement pas être
+exécutés en même temps.
+
+J'espère avoir été assez clair dans l'explication de ces 2 concepts
+tellement utiles, mais au final si peu compris par la majorité des
+développeurs.
+
+Si vous avez des questions, il y a toujours les commentaires !
