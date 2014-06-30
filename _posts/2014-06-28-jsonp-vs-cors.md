@@ -127,9 +127,6 @@ confiance au serveur.
 
 ## Conclusion
 
-Vous comprenez maintenant pourquoi le code de l'introduction était
-une hérésie :-)
-
 Ces 2 concepts complètement différents ne peuvent clairement pas être
 exécutés en même temps.
 
