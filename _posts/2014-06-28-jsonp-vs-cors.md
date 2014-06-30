@@ -15,15 +15,7 @@ Quand on se retrouve face à ce choix, il existe 2 solutions : JSONP et
 CORS.
 
 Le problème, c'est que beaucoup de développeurs ne savent pas ce que
-sont ces deux techniques. Et on se retrouve avec ce genre de code :
-
-    $.ajax({
-        type: 'jsonp',
-        crossDomain: true
-        // ...
-
-Si vous ne voyez pas l'horreur, j'espère que vous la verrez d'ici la
-fin de cet article.
+sont ces deux techniques.
 
 ## Historique
 
