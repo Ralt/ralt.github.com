@@ -1,0 +1,76 @@
+==================================================================
+https://keybase.io/fmargaine
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://margaine.com
+  * I am fmargaine (https://keybase.io/fmargaine) on keybase.
+  * I have a public key with fingerprint 59C0 D5DA 7AEB 336D 1424  BF56 843F 6D75 3D94 972A
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.7.3"
+        },
+        "key": {
+            "fingerprint": "59c0d5da7aeb336d1424bf56843f6d753d94972a",
+            "host": "keybase.io",
+            "key_id": "843F6D753D94972A",
+            "uid": "072908fc52dd0992b236a058bd728500",
+            "username": "fmargaine"
+        },
+        "merkle_root": {
+            "ctime": 1419806257,
+            "hash": "8a0b536160b95099f33ba805120d42e7003333df394e6d18adfdfa744e8c4e65bd217e5d608732fd46efbdb6ba12590c8293bb164db59f5a07dab60a1eb0b572",
+            "seqno": 117562
+        },
+        "service": {
+            "hostname": "margaine.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1419806395,
+    "expire_in": 157680000,
+    "prev": "789ed825281fe39a1b8a90799d5dfeedd51b94b2faf39bc6eec6c82bb3b0e85c",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFVkl1sFUUUx29LQaxKW28MrSlYFzR+lNvZ2Z2ZnWpjqk2toYaYGBKg5Dqzc/Z2
+ae/uZff2lkoq+BGjEosSQuENMTwQSSFRLAT7AJJAgISkAX0wIvEDJaZ8aNKQEqqz
+TQkwT7tzfvM/53/O+eyROanysg9eyve1bB9+ruzMFZl6c/eHRzcaMlQDRvNGw+31
+ISgmX4HIg9Fs9MCAFDFk/LAhCBVk1sUNs0yjUYIo9sNAUyjDMpYx2JjgyWPPD3IQ
+FSI/0TIId5EiSjAB0rKoMm1sS49Qx7Y8qhixFLc5w0JLdodx8b6sxoxm1lf6VvPt
+tE3zbTN8q471zQQQwxw5nkuwUohzLLFFBSKOVAw7BKEEjCGateTlRZQTfgBJwXmI
+enohG4XhjGu36CeMaZvcQRQTpksScXeSXCBJLGpSJDnRSTzLksJBxMRI2RgYQpY+
+yrO4DdqiI5SnPMFsGxxX3xCpsMmAKIocZmFP2RQ8qSSVwsSEI9fB3JLSpLaShHtE
+IKaEpEiYIHVihrWHGNYHoS7OZITiweQ/KvkuJHUnfZu1d8ddxg3z+lEhCouhG/bq
+SHexWGhOTBcHCgnZD3IkOyuSlX6g9NTuHaup0fsbYnHSaMCGgh9B1k8IwqiD9Eny
+QElrMoeDcjDBjumBxYUpHcER41wvgAegFDEltyX2hO6UdCmAS7V3KS2JwCHuXZu2
+rlPktGTs5wJR7Iv0vD4uq69IlZWn5s0tT/Y2Vflg9Z1lPvrPA7cfzz1j19Gv/hxf
+XvtqzWjH1c2/n63692LpW3+satn4U28sf3biSHW8/vvK1btvfPfu1ilv8oBbWJv+
+aemFkcmmSw/XtJz7cvOxLT3DbZ9O/PZJxWOv1CyY/9CeGwsHIbNtR/mTB1+oOGOM
+TqT768/v2nm8Od0x+SJfc23V4penrryz8+Rlsuvv4Brfv3fpyMrWrr86L3803LD3
+/UvDU6sOtn9x+MeFT5Pa56uaFk1v2/PWqdc63V+XVXx+YMnVsQ32dJjuX7NiCLbU
+pYcuLO44cfPW2KZS9r90S+cvF/ftr+xqfXvJ+UOy63T1z4Qcv15bP7rikByqs6f/
+CA/vu/XNE1+/d3p6a9OOua9PPPrD+P8=
+=EHsE
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/fmargaine
+
+==================================================================
