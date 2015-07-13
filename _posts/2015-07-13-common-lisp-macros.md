@@ -4,17 +4,6 @@ title: Les macros en Common Lisp
 description: Un petit aperçu du pouvoir des macros en Common Lisp
 ---
 
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#sec-1">1. Petite introduction</a></li>
-<li><a href="#sec-2">2. Petit exemple</a></li>
-<li><a href="#sec-3">3. Conclusion</a></li>
-</ul>
-</div>
-</div>
-
 Depuis maintenant un bout de temps, je m'intéresse beaucoup au langage
 Common Lisp. C'est un langage très intéressant pour plein de raisons,
 mais grosso modo : toutes les fonctionnalités que vous voyez dans les
