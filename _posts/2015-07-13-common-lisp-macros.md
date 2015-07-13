@@ -63,6 +63,13 @@ stocke toutes ces actions dans la variable `*actions*`.
 
     (defvar *actions* nil)
 
+Je vais donc maintenant ajouter une action, et une fonction anonyme
+(lambda) correspondante :
+
+    (push
+      #'(lambda (x) (do-something-with x)
+      *actions*))
+
 Un peu répétitif si je veux faire ça à chaque action. Utilisons une
 fonction :
 

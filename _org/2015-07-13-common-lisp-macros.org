@@ -67,7 +67,7 @@ stocke toutes ces actions dans la variable ~*actions*~.
 
 #+BEGIN_SRC lisp
 (defvar *actions* nil)
-#+END_SRC lisp
+#+END_SRC
 
 Je vais donc maintenant ajouter une action, et une fonction anonyme
 (lambda) correspondante :
