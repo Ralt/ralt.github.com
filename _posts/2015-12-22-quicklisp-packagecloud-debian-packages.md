@@ -17,8 +17,8 @@ installations, since the `quicklisp` folder is per-user.
 
 To fix this, I have generated a debian package for every quicklisp
 system available. The project that generates the debian packages is
-available here, if you want to do it yourself:
-https://github.com/ralt/qldeb (It depends on [deb-packager][0].)
+available here, if you want to do it yourself: [qldeb][0]. (It depends
+on [deb-packager][1].)
 
 Every package will dump the library's source code in
 `/usr/share/common-lisp/source/`, which is loadable by asdf if you
@@ -29,7 +29,7 @@ Another issue that I had: hosting.
 I host my personal debian repository for some custom packages, but
 it's just not convenient for something that can see some real usage.
 
-The people at [packagecloud.io][1] have been very kind to provide me
+The people at [packagecloud.io][2] have been very kind to provide me
 free hosting for this repository.
 
 Thanks to their machinery, all you need to download Common Lisp
@@ -59,5 +59,6 @@ Several notes:
 And with this, hack and glory awaits!
 
 
-  [0]: https://github.com/ralt/deb-packager
-  [1]: https://packagecloud.io
+  [0]: https://github.com/ralt/qldeb
+  [1]: https://github.com/ralt/deb-packager
+  [2]: https://packagecloud.io
